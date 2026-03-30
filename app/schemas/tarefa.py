@@ -1,7 +1,12 @@
 from pydantic import BaseModel
+from typing import Optional
 
 class TarefaCreate(BaseModel):
     titulo: str
+
+class TarefaUpdate(BaseModel):
+    titulo: Optional[str] = None
+    concluida: Optional[bool] = None
 
 class TarefaResponse(BaseModel):
     id: int
@@ -9,4 +14,4 @@ class TarefaResponse(BaseModel):
     concluida: bool
 
     class Config:
-        orm_mode = True
+        from_attributes = True  # era orm_mode no Pydantic v1
