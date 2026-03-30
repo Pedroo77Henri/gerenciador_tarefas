@@ -1,0 +1,133 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+  color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 48px 16px;
+}
+
+main {
+  width: 100%;
+  max-width: 520px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #111;
+}
+
+.input-area {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #fff;
+}
+
+input[type="text"]:focus {
+  border-color: #888;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#btn-adicionar {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+#btn-adicionar:hover {
+  background: #333;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 12px 14px;
+  transition: opacity 0.2s;
+}
+
+li.concluida {
+  opacity: 0.5;
+}
+
+li.concluida .titulo {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.titulo {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.btn-concluir {
+  background: #f0f0f0;
+  color: #444;
+  font-size: 0.8rem;
+  padding: 6px 12px;
+}
+
+.btn-concluir:hover {
+  background: #e0e0e0;
+}
+
+li.concluida .btn-concluir {
+  background: #e6f4ea;
+  color: #2e7d32;
+}
+
+.btn-deletar {
+  background: none;
+  color: #bbb;
+  font-size: 1.1rem;
+  padding: 4px 8px;
+}
+
+.btn-deletar:hover {
+  color: #e53935;
+}
+
+#msg-vazia {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-top: 32px;
+  display: none;
+}
